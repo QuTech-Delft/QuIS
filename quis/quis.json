@@ -1,5 +1,11 @@
 [
     {
-        "name": "X"
+        "name" : "",
+        "long_name" : "",
+        "alias" : "",
+        "number_of_qubit" : "",
+        "description" : "",
+        "parameters" : null,
+        "semantics" : null
     }
 ]
