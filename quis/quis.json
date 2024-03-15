@@ -1,26 +1,36 @@
 [
     {
         "name" : "X",
-        "longName" : ["bit flip"],
+        "longName" : "bit flip",
         "aliases" : ["x"],
         "description" : "Pauli X gate. An anticlockwise rotation of pi radians along the x-axis.",
         "numberOfQubits" : 1,
-        "qubitArguments" : ["q"],
         "parameters" : null,
         "semantics" : [
             {
                 "type" : "blochSphereRotation",
                 "kwargs" :
                 {
-                    "qubitReference" : "q",
-                    "norm" : 1,
+                    "qubitReferenceIndex" : 0,
                     "axis" : [1, 0, 0],
-                    "angle" : 1,
+                    "angle" :
+                    {
+                        "type" : "constant",
+                        "value" : "pi",
+                        "args" : null
+                    },
                     "globalPhase" :
                     {
                         "type" : "operator",
                         "value" : "frac",
-                        "args" : [1, 2]
+                        "args" : [
+                            {
+                                "type" : "constant",
+                                "value" : "pi",
+                                "args" : null
+                            },
+                            2
+                        ]
                     }
                 }
             }
@@ -32,7 +42,6 @@
         "aliases" : ["rxy"],
         "description" : "<description>",
         "numberOfQubits" : 1,
-        "qubitArguments" : ["q"],
         "parameters" : [
             {
                 "reference" : "theta",
@@ -48,8 +57,7 @@
                 "type" : "blochSphereRotation",
                 "kwargs" :
                 {
-                    "qubitReference" : "q",
-                    "norm" : 1,
+                    "qubitReferenceIndex" : 0,
                     "axis" : [
                         {
                             "type" : "operator",
@@ -92,7 +100,6 @@
         "aliases" : ["cpk", "CRk", "crk"],
         "description" : "<description>",
         "numberOfQubits" : 2,
-        "qubitArguments" : ["q0", "q1"],
         "parameters" : [
             {
                 "reference" : "k",
@@ -102,21 +109,34 @@
         "semantics" : [
             {
                 "type": "controlledGate",
-                "kwargs": {
-                    "controlQubitReference": "q0",
-                    "targetQubitReference": "q1",
-                    "targetGate": {
+                "kwargs":
+                {
+                    "controlQubitReferenceIndex": 0,
+                    "targetQubitReferenceIndex": 1,
+                    "targetGate":
+                    {
                         "type": "blochSphereRotation",
-                        "kwargs": {
-                            "qubitReference": "q",
-                            "norm": 1,
+                        "kwargs":
+                        {
+                            "qubitReferenceIndex": 1,
                             "axis": [0, 0, 1],
                             "angle":
                             {
                                 "type": "operator",
-                                "value": "frac",
-                                "args": [
-                                    2,
+                                "value": "fraction", "args": [
+                                    {
+                                        "type": "operator",
+                                        "value": "mul",
+                                        "args": [
+                                            2,
+                                            {
+                                                "type": "constant",
+                                                "value": "pi",
+                                                "args": null
+                                            }
+                                        ]
+
+                                    },
                                     {
                                         "type": "operator",
                                         "value": "power",
@@ -134,9 +154,13 @@
                             "globalPhase":
                             {
                                 "type": "operator",
-                                "value": "frac",
+                                "value": "fraction",
                                 "args": [
-                                    1,
+                                    {
+                                        "type" : "constant",
+                                        "value" : "pi",
+                                        "args" : null
+                                    },
                                     {
                                         "type": "operator",
                                         "value": "power",
