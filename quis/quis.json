@@ -1,184 +1,195 @@
-[
+{
+    "gates":
     {
-        "name" : "X",
-        "longName" : "bit flip",
-        "aliases" : ["x"],
-        "description" : "Pauli X gate. An anticlockwise rotation of pi radians along the x-axis.",
-        "numberOfQubits" : 1,
-        "parameters" : null,
-        "semantics" : [
-            {
-                "type" : "blochSphereRotation",
-                "kwargs" :
+        "X":
+        {
+            "longName" : "bit flip",
+            "aliases" : ["x"],
+            "description" : "Pauli X gate. An anticlockwise rotation of pi radians along the x-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
                 {
-                    "qubitReferenceIndex" : 0,
-                    "axis" : [1, 0, 0],
-                    "angle" :
+                    "type" : "blochSphereRotation",
+                    "kwargs" :
                     {
-                        "type" : "constant",
-                        "value" : "pi",
-                        "args" : null
-                    },
-                    "globalPhase" :
-                    {
-                        "type" : "operator",
-                        "value" : "frac",
-                        "args" : [
-                            {
-                                "type" : "constant",
-                                "value" : "pi",
-                                "args" : null
-                            },
-                            2
-                        ]
+                        "qubitReferenceIndex" : 0,
+                        "axis" : [1, 0, 0],
+                        "angle" :
+                        {
+                            "type" : "constant",
+                            "value" : "pi",
+                            "args" : null
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                2
+                            ]
+                        }
                     }
                 }
-            }
-        ]
-    },
-    {
-        "name" : "Rxy",
-        "longName" : null,
-        "aliases" : ["rxy"],
-        "description" : "<description>",
-        "numberOfQubits" : 1,
-        "parameters" : [
-            {
-                "reference" : "theta",
-                "type" : "float"
-            },
-            {
-                "reference" : "phi",
-                "type" : "float"
-            }
-        ],
-        "semantics" : [
-            {
-                "type" : "blochSphereRotation",
-                "kwargs" :
+            ]
+        },
+        "Rxy":
+        {
+            "type": "gate",
+            "longName" : null,
+            "aliases" : ["rxy"],
+            "description" : "<description>",
+            "numberOfQubits" : 1,
+            "parameters" : [
                 {
-                    "qubitReferenceIndex" : 0,
-                    "axis" : [
-                        {
-                            "type" : "operator",
-                            "value" : "cos",
-                            "args" : [
-                                {
-                                    "type" : "parameter",
-                                    "value" : "phi",
-                                    "args": null
-                                }
-                            ]
-                        },
-                        {
-                            "type" : "operator",
-                            "value" : "sin",
-                            "args" : [
-                                {
-                                    "type" : "parameter",
-                                    "value" : "phi",
-                                    "args": null
-                                }
-                            ]
-                        },
-                        0
-                    ],
-                    "angle" :
-                    {
-                        "type" : "parameter",
-                        "value" : "theta",
-                        "args": null
-                    },
-                    "globalPhase" : 0
+                    "reference" : "theta",
+                    "type" : "float"
+                },
+                {
+                    "reference" : "phi",
+                    "type" : "float"
                 }
-            }
-        ]
-    },
-    {
-        "name" : "CPk",
-        "longName" : null,
-        "aliases" : ["cpk", "CRk", "crk"],
-        "description" : "<description>",
-        "numberOfQubits" : 2,
-        "parameters" : [
-            {
-                "reference" : "k",
-                "type" : "integer"
-            }
-        ],
-        "semantics" : [
-            {
-                "type": "controlledGate",
-                "kwargs":
+            ],
+            "semantics" : [
                 {
-                    "controlQubitReferenceIndex": 0,
-                    "targetQubitReferenceIndex": 1,
-                    "targetGate":
+                    "type" : "blochSphereRotation",
+                    "kwargs" :
                     {
-                        "type": "blochSphereRotation",
-                        "kwargs":
-                        {
-                            "qubitReferenceIndex": 1,
-                            "axis": [0, 0, 1],
-                            "angle":
+                        "qubitReferenceIndex" : 0,
+                        "axis" : [
                             {
-                                "type": "operator",
-                                "value": "fraction", "args": [
+                                "type" : "operator",
+                                "value" : "cos",
+                                "args" : [
                                     {
-                                        "type": "operator",
-                                        "value": "mul",
-                                        "args": [
-                                            2,
-                                            {
-                                                "type": "constant",
-                                                "value": "pi",
-                                                "args": null
-                                            }
-                                        ]
-
-                                    },
-                                    {
-                                        "type": "operator",
-                                        "value": "power",
-                                        "args": [
-                                            2,
-                                            {
-                                                "type": "parameter",
-                                                "value": "k",
-                                                "args": null
-                                            }
-                                        ]
+                                        "type" : "parameter",
+                                        "value" : "phi",
+                                        "args": null
                                     }
                                 ]
                             },
-                            "globalPhase":
                             {
-                                "type": "operator",
-                                "value": "fraction",
-                                "args": [
+                                "type" : "operator",
+                                "value" : "sin",
+                                "args" : [
                                     {
-                                        "type" : "constant",
-                                        "value" : "pi",
-                                        "args" : null
-                                    },
-                                    {
-                                        "type": "operator",
-                                        "value": "power",
-                                        "args": [
-                                            2,
-                                            {
-                                                "type": "parameter",
-                                                "value": "k",
-                                                "args": null
-                                            }
-                                        ]
+                                        "type" : "parameter",
+                                        "value" : "phi",
+                                        "args": null
                                     }
                                 ]
+                            },
+                            0
+                        ],
+                        "angle" :
+                        {
+                            "type" : "parameter",
+                            "value" : "theta",
+                            "args": null
+                        },
+                        "globalPhase" : 0
+                    }
+                }
+            ]
+        },
+        "CPk":
+        {
+            "type": "gate",
+            "longName": null,
+            "aliases": ["cpk", "CRk", "crk"],
+            "description" : "<description>",
+            "numberOfQubits" : 2,
+            "parameters" : [
+                {
+                    "reference" : "k",
+                    "type" : "integer"
+                }
+            ],
+            "semantics" : [
+                {
+                    "type": "controlledGate",
+                    "kwargs":
+                    {
+                        "controlQubitReferenceIndex": 0,
+                        "targetQubitReferenceIndex": 1,
+                        "targetGate":
+                        {
+                            "type": "blochSphereRotation",
+                            "kwargs":
+                            {
+                                "qubitReferenceIndex": 1,
+                                "axis": [0, 0, 1],
+                                "angle":
+                                {
+                                    "type": "operator",
+                                    "value": "fraction", "args": [
+                                        {
+                                            "type": "operator",
+                                            "value": "mul",
+                                            "args": [
+                                                2,
+                                                {
+                                                    "type": "constant",
+                                                    "value": "pi",
+                                                    "args": null
+                                                }
+                                            ]
+
+                                        },
+                                        {
+                                            "type": "operator",
+                                            "value": "power",
+                                            "args": [
+                                                2,
+                                                {
+                                                    "type": "parameter",
+                                                    "value": "k",
+                                                    "args": null
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "globalPhase":
+                                {
+                                    "type": "operator",
+                                    "value": "fraction",
+                                    "args": [
+                                        {
+                                            "type" : "constant",
+                                            "value" : "pi",
+                                            "args" : null
+                                        },
+                                        {
+                                            "type": "operator",
+                                            "value": "power",
+                                            "args": [
+                                                2,
+                                                {
+                                                    "type": "parameter",
+                                                    "value": "k",
+                                                    "args": null
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
                             }
                         }
                     }
                 }
-            }
-        ]
+            ]
+        }
+    },
+    "aliases":
+    {
+        "x": "X",
+        "rxy": "Rxy",
+        "cpk": "CPk"
     }
-]
+}

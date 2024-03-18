@@ -24,9 +24,9 @@ Link to the documentation for QuIS will follow soon.
 
 ## Authors
 
-Chris Elenbaas ([chris.elenbaas@tno.nl](mailto:chris.elenbaas@tno.nl))
+Quantum Inspire ([support@quantum-inspire.com](mailto:support@quantum-inspire.com))
 
-[Quantum Inspire](https://www.quantum-inspire.com/) (QuTech: TNO & TU Delft)
+QuTech: TNO & TU Delft
 
 ## License
 

@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "quis"
 version = "0.0.1"
-authors = ["Chris Elenbaas <chris.elenbaas@tno.nl>"]
+authors = ["Quantum Inspire support@quantum-inspire.com"]
 description = "A Quantum Instruction Set"
 license = "Apache-2.0"
 readme = "README.md"
