@@ -3,6 +3,21 @@
     {
         "_I":
         {
+            "longName" : "identity",
+            "description" : "Identity gate.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "kwargs" :
+                    {
+                        "axis" : [0, 0, 1],
+                        "angle" : 0,
+                        "globalPhase" : 0
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "I",
@@ -12,6 +27,38 @@
         },
         "_H":
         {
+            "longName" : "Hadamard",
+            "description" : "Hadamard gate.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "kwargs" :
+                    {
+                        "axis" : [1, 0, 1],
+                        "angle" :
+                        {
+                            "type" : "constant",
+                            "value" : "pi",
+                            "args" : null
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                2
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "H",
@@ -22,7 +69,7 @@
         "_X":
         {
             "longName" : "bit flip",
-            "description" : "Pauli X gate. An anticlockwise rotation of pi radians along the x-axis.",
+            "description" : "Pauli X gate. An anticlockwise rotation of $\\pi$ radians along the _x_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
             "semantics" : [
@@ -62,6 +109,45 @@
         },
         "_X90":
         {
+            "longName" : null,
+            "description" : "An anticlockwise rotation of $\\pi/2$ radians along the _x_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "kwargs" :
+                    {
+                        "axis" : [1, 0, 0],
+                        "angle" :
+                        {
+                            "type": "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                2
+                            ]
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                4
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "X",
@@ -71,6 +157,45 @@
         },
         "_mX90":
         {
+            "longName" : null,
+            "description" : "A clockwise rotation of $\\pi/2$ radians along the _x_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "kwargs" :
+                    {
+                        "axis" : [1, 0, 0],
+                        "angle" :
+                        {
+                            "type": "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                -2
+                            ]
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                -4
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "X",
@@ -80,6 +205,38 @@
         },
         "_Y":
         {
+            "longName" : null,
+            "description" : "Pauli Y gate. An anticlockwise rotation of $\\pi$ radians along the _y_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "kwargs" :
+                    {
+                        "axis" : [0, 1, 0],
+                        "angle" :
+                        {
+                            "type" : "constant",
+                            "value" : "pi",
+                            "args" : null
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                2
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "Y",
@@ -89,6 +246,45 @@
         },
         "_Y90":
         {
+            "longName" : null,
+            "description" : "An anticlockwise rotation of $\\pi/2$ radians along the _y_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "kwargs" :
+                    {
+                        "axis" : [0, 1, 0],
+                        "angle" :
+                        {
+                            "type": "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                2
+                            ]
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                4
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "Y",
@@ -98,6 +294,45 @@
         },
         "_mY90":
         {
+            "longName" : null,
+            "description" : "A clockwise rotation of $\\pi/2$ radians along the _y_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "kwargs" :
+                    {
+                        "axis" : [0, 1, 0],
+                        "angle" :
+                        {
+                            "type": "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                -2
+                            ]
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                -4
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "Y",
@@ -107,6 +342,38 @@
         },
         "_Z":
         {
+            "longName" : "phase flip",
+            "description" : "Pauli Z gate. An anticlockwise rotation of $\\pi$ radians along the _z_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "kwargs" :
+                    {
+                        "axis" : [0, 0, 1],
+                        "angle" :
+                        {
+                            "type" : "constant",
+                            "value" : "pi",
+                            "args" : null
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                2
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "Z",
@@ -116,6 +383,45 @@
         },
         "_S":
         {
+            "longName" : null,
+            "description" : "An anticlockwise rotation of $\\pi/2$ radians along the _z_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "kwargs" :
+                    {
+                        "axis" : [0, 0, 1],
+                        "angle" :
+                        {
+                            "type": "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                2
+                            ]
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                4
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "S",
@@ -125,15 +431,93 @@
         },
         "_Sdag":
         {
+            "longName" : null,
+            "description" : "A clockwise rotation of $\\pi/2$ radians along the _z_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "kwargs" :
+                    {
+                        "axis" : [0, 0, 1],
+                        "angle" :
+                        {
+                            "type": "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                -2
+                            ]
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                -4
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "S",
                 "subscript": null,
-                "superscript": "dagger"
+                "superscript": "$\\dagger$"
             }
         },
         "_T":
         {
+            "longName" : null,
+            "description" : "An anticlockwise rotation of $\\pi/4$ radians along the _z_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "kwargs" :
+                    {
+                        "axis" : [0, 0, 1],
+                        "angle" :
+                        {
+                            "type": "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                4
+                            ]
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                8
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "T",
@@ -143,15 +527,79 @@
         },
         "_Tdag":
         {
+            "longName" : null,
+            "description" : "A clockwise rotation of $\\pi/4$ radians along the _z_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "kwargs" :
+                    {
+                        "axis" : [0, 0, 1],
+                        "angle" :
+                        {
+                            "type": "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                -4
+                            ]
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                -8
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "T",
                 "subscript": null,
-                "superscript": "dagger"
+                "superscript": "$\\dagger$"
             }
         },
         "_Rx":
         {
+            "longName" : null,
+            "description" : "An anticlockwise rotation of $\\theta$ radians along the _x_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : [
+                {
+                    "reference" : "theta",
+                    "type" : "float"
+                }
+            ],
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "kwargs" :
+                    {
+                        "axis" : [1, 0, 0],
+                        "angle" :
+                        {
+                            "type" : "parameter",
+                            "value" : "theta",
+                            "args": null
+                        },
+                        "globalPhase" : 0
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "R",
@@ -161,6 +609,31 @@
         },
         "_Ry":
         {
+            "longName" : null,
+            "description" : "An anticlockwise rotation of $\\theta$ radians along the _y_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : [
+                {
+                    "reference" : "theta",
+                    "type" : "float"
+                }
+            ],
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "kwargs" :
+                    {
+                        "axis" : [0, 1, 0],
+                        "angle" :
+                        {
+                            "type" : "parameter",
+                            "value" : "theta",
+                            "args": null
+                        },
+                        "globalPhase" : 0
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "R",
@@ -170,6 +643,31 @@
         },
         "_Rz":
         {
+            "longName" : null,
+            "description" : "An anticlockwise rotation of $\\theta$ radians along the _z_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : [
+                {
+                    "reference" : "theta",
+                    "type" : "float"
+                }
+            ],
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "kwargs" :
+                    {
+                        "axis" : [0, 0, 1],
+                        "angle" :
+                        {
+                            "type" : "parameter",
+                            "value" : "theta",
+                            "args": null
+                        },
+                        "globalPhase" : 0
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "R",
@@ -219,7 +717,7 @@
             "icon":
             {
                 "base": "P",
-                "subscript": "theta",
+                "subscript": "$\\theta$",
                 "superscript": null
             }
         },
