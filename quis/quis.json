@@ -22,7 +22,7 @@
         "_X":
         {
             "longName" : "bit flip",
-            "description" : "Pauli X gate. An anticlockwise rotation of pi radians along the x-axis.",
+            "description" : "Pauli X gate. An anticlockwise rotation of $\\pi$ radians along the _x_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
             "semantics" : [
@@ -129,7 +129,7 @@
             {
                 "base": "S",
                 "subscript": null,
-                "superscript": "dagger"
+                "superscript": "$\\dagger$"
             }
         },
         "_T":
@@ -147,7 +147,7 @@
             {
                 "base": "T",
                 "subscript": null,
-                "superscript": "dagger"
+                "superscript": "$\\dagger$"
             }
         },
         "_Rx":
@@ -219,7 +219,7 @@
             "icon":
             {
                 "base": "P",
-                "subscript": "theta",
+                "subscript": "$\\theta$",
                 "superscript": null
             }
         },
@@ -360,7 +360,13 @@
                         "globalPhase" : 0
                     }
                 }
-            ]
+            ],
+            "icon":
+            {
+                "base": "R",
+                "subscript": "xy",
+                "superscript": null
+            }
         },
         "_CNOT":
         {
