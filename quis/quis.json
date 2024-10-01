@@ -3,32 +3,77 @@
     {
         "_I":
         {
-            "icon":
-            {
-                "base": "I",
-                "subscript": null,
-                "superscript": null
-            }
-        },
-        "_H":
-        {
-            "icon":
-            {
-                "base": "H",
-                "subscript": null,
-                "superscript": null
-            }
-        },
-        "_X":
-        {
-            "longName" : "bit flip",
-            "description" : "Pauli X gate. An anticlockwise rotation of $\\pi$ radians along the _x_-axis.",
+            "title" : "Identity gate",
+            "description" : "Identity gate.",
             "numberOfQubits" : 1,
             "parameters" : null,
             "semantics" : [
                 {
                     "type" : "blochSphereRotation",
-                    "kwargs" :
+                    "args" :
+                    {
+                        "axis" : [0, 0, 1],
+                        "angle" : 0,
+                        "globalPhase" : 0
+                    }
+                }
+            ],
+            "icon":
+            {
+                "base": "I",
+                "suffix": null
+            }
+        },
+        "_H":
+        {
+            "title" : "Hadamard gate",
+            "description" : "Hadamard gate.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "args" :
+                    {
+                        "axis" : [1, 0, 1],
+                        "angle" :
+                        {
+                            "type" : "constant",
+                            "value" : "pi",
+                            "args" : null
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                2
+                            ]
+                        }
+                    }
+                }
+            ],
+            "icon":
+            {
+                "base": "H",
+                "suffix": null
+            }
+        },
+        "_X":
+        {
+            "title" : "Pauli-X gate",
+            "description" : "Pauli X gate or bit flip. An anticlockwise rotation of $\\pi$ radians about the _x_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "args" :
                     {
                         "axis" : [1, 0, 0],
                         "angle" :
@@ -56,130 +101,594 @@
             "icon":
             {
                 "base": "X",
-                "subscript": null,
-                "superscript": null
+                "suffix": null
             }
         },
         "_X90":
         {
+            "title" : "X-90 gate",
+            "description" : "An anticlockwise rotation of $\\pi/2$ radians about the _x_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "args" :
+                    {
+                        "axis" : [1, 0, 0],
+                        "angle" :
+                        {
+                            "type": "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                2
+                            ]
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                4
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "X",
-                "subscript": null,
-                "superscript": "1/2"
+                "suffix": {
+                    "subscript": null,
+                    "superscript": "half"
+                }
             }
         },
         "_mX90":
         {
+            "title" : "X-minus-90 gate",
+            "description" : "A clockwise rotation of $\\pi/2$ radians about the _x_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "args" :
+                    {
+                        "axis" : [1, 0, 0],
+                        "angle" :
+                        {
+                            "type": "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                -2
+                            ]
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                -4
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "X",
-                "subscript": null,
-                "superscript": "-1/2"
+                "suffix": {
+                    "subscript": null,
+                    "superscript": "minushalf"
+                }
             }
         },
         "_Y":
         {
+            "title" : "Pauli-Y gate",
+            "description" : "Pauli Y gate. An anticlockwise rotation of $\\pi$ radians about the _y_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "args" :
+                    {
+                        "axis" : [0, 1, 0],
+                        "angle" :
+                        {
+                            "type" : "constant",
+                            "value" : "pi",
+                            "args" : null
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                2
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "Y",
-                "subscript": null,
-                "superscript": null
+                "suffix": null
             }
         },
         "_Y90":
         {
+            "title" : "Y-90 gate",
+            "description" : "An anticlockwise rotation of $\\pi/2$ radians about the _y_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "args" :
+                    {
+                        "axis" : [0, 1, 0],
+                        "angle" :
+                        {
+                            "type": "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                2
+                            ]
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                4
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "Y",
-                "subscript": null,
-                "superscript": "1/2"
+                "suffix": {
+                    "subscript": null,
+                    "superscript": "half"
+                }
             }
         },
         "_mY90":
         {
+            "title" : "Y-minus-90 gate",
+            "description" : "A clockwise rotation of $\\pi/2$ radians about the _y_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "args" :
+                    {
+                        "axis" : [0, 1, 0],
+                        "angle" :
+                        {
+                            "type": "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                -2
+                            ]
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                -4
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "Y",
-                "subscript": null,
-                "superscript": "-1/2"
+                "suffix": {
+                    "subscript": null,
+                    "superscript": "minushalf"
+                }
             }
         },
         "_Z":
         {
+            "title" : "Pauli-Z gate",
+            "description" : "Pauli Z gate or phase flip. An anticlockwise rotation of $\\pi$ radians about the _z_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "args" :
+                    {
+                        "axis" : [0, 0, 1],
+                        "angle" :
+                        {
+                            "type" : "constant",
+                            "value" : "pi",
+                            "args" : null
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                2
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "Z",
-                "subscript": null,
-                "superscript": null
+                "suffix": null
             }
         },
         "_S":
         {
+            "title" : "S gate",
+            "description" : "An anticlockwise rotation of $\\pi/2$ radians about the _z_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "args" :
+                    {
+                        "axis" : [0, 0, 1],
+                        "angle" :
+                        {
+                            "type": "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                2
+                            ]
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                4
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "S",
-                "subscript": null,
-                "superscript": null
+                "suffix": null
             }
         },
         "_Sdag":
         {
+            "title" : "S-dagger gate",
+            "description" : "A clockwise rotation of $\\pi/2$ radians about the _z_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "args" :
+                    {
+                        "axis" : [0, 0, 1],
+                        "angle" :
+                        {
+                            "type": "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                -2
+                            ]
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                -4
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "S",
-                "subscript": null,
-                "superscript": "$\\dagger$"
+                "suffix": {
+                    "subscript": null,
+                    "superscript": "dagger"
+                }
             }
         },
         "_T":
         {
+            "title" : "T gate",
+            "description" : "An anticlockwise rotation of $\\pi/4$ radians about the _z_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "args" :
+                    {
+                        "axis" : [0, 0, 1],
+                        "angle" :
+                        {
+                            "type": "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                4
+                            ]
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                8
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "T",
-                "subscript": null,
-                "superscript": null
+                "suffix": null
             }
         },
         "_Tdag":
         {
+            "title" : "T-dagger gate",
+            "description" : "A clockwise rotation of $\\pi/4$ radians about the _z_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : null,
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "args" :
+                    {
+                        "axis" : [0, 0, 1],
+                        "angle" :
+                        {
+                            "type": "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                -4
+                            ]
+                        },
+                        "globalPhase" :
+                        {
+                            "type" : "operator",
+                            "value" : "frac",
+                            "args" : [
+                                {
+                                    "type" : "constant",
+                                    "value" : "pi",
+                                    "args" : null
+                                },
+                                -8
+                            ]
+                        }
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "T",
-                "subscript": null,
-                "superscript": "$\\dagger$"
+                "suffix": {
+                    "subscript": null,
+                    "superscript": "dagger"
+                }
             }
         },
         "_Rx":
         {
+            "title" : "Rx gate",
+            "description" : "An anticlockwise rotation of $\\theta$ radians about the _x_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : [
+                {
+                    "reference" : "theta",
+                    "type" : "float"
+                }
+            ],
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "args" :
+                    {
+                        "axis" : [1, 0, 0],
+                        "angle" :
+                        {
+                            "type" : "parameter",
+                            "value" : "theta",
+                            "args": null
+                        },
+                        "globalPhase" : 0
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "R",
-                "subscript": "x",
-                "superscript": null
+                "suffix": {
+                    "subscript": "x",
+                    "superscript": null
+                }
             }
         },
         "_Ry":
         {
+            "title" : "Ry gate",
+            "description" : "An anticlockwise rotation of $\\theta$ radians about the _y_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : [
+                {
+                    "reference" : "theta",
+                    "type" : "float"
+                }
+            ],
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "args" :
+                    {
+                        "axis" : [0, 1, 0],
+                        "angle" :
+                        {
+                            "type" : "parameter",
+                            "value" : "theta",
+                            "args": null
+                        },
+                        "globalPhase" : 0
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "R",
-                "subscript": "y",
-                "superscript": null
+                "suffix": {
+                    "subscript": "y",
+                    "superscript": null
+                }
             }
         },
         "_Rz":
         {
+            "title" : "Rz gate",
+            "description" : "An anticlockwise rotation of $\\theta$ radians about the _z_-axis.",
+            "numberOfQubits" : 1,
+            "parameters" : [
+                {
+                    "reference" : "theta",
+                    "type" : "float"
+                }
+            ],
+            "semantics" : [
+                {
+                    "type" : "blochSphereRotation",
+                    "args" :
+                    {
+                        "axis" : [0, 0, 1],
+                        "angle" :
+                        {
+                            "type" : "parameter",
+                            "value" : "theta",
+                            "args": null
+                        },
+                        "globalPhase" : 0
+                    }
+                }
+            ],
             "icon":
             {
                 "base": "R",
-                "subscript": "z",
-                "superscript": null
+                "suffix": {
+                    "subscript": "z",
+                    "superscript": null
+                }
             }
         },
         "_P":
         {
-            "longName" : null,
+            "title" : "Phase gate",
             "description" : null,
             "numberOfQubits" : 1,
             "parameters" : [
@@ -191,7 +700,7 @@
             "semantics" : [
                 {
                     "type": "blochSphereRotation",
-                    "kwargs":
+                    "args":
                     {
                         "axis": [0, 0, 1],
                         "angle":
@@ -219,13 +728,15 @@
             "icon":
             {
                 "base": "P",
-                "subscript": "$\\theta$",
-                "superscript": null
+                "suffix": {
+                    "subscript": "theta",
+                    "superscript": null
+                }
             }
         },
         "_Pk":
         {
-            "longName" : null,
+            "title" : "Phase-k gate",
             "description" : null,
             "numberOfQubits" : 1,
             "parameters" : [
@@ -237,7 +748,7 @@
             "semantics" : [
                 {
                     "type": "blochSphereRotation",
-                    "kwargs":
+                    "args":
                     {
                         "axis": [0, 0, 1],
                         "angle":
@@ -302,13 +813,15 @@
             "icon":
             {
                 "base": "P",
-                "subscript": "k",
-                "superscript": null
+                "suffix": {
+                    "subscript": "k",
+                    "superscript": null
+                }
             }
         },
         "_Rxy":
         {
-            "longName" : null,
+            "title" : "Rxy gate",
             "description" : null,
             "numberOfQubits" : 1,
             "parameters" : [
@@ -324,7 +837,7 @@
             "semantics" : [
                 {
                     "type" : "blochSphereRotation",
-                    "kwargs" :
+                    "args" :
                     {
                         "axis" : [
                             {
@@ -364,20 +877,22 @@
             "icon":
             {
                 "base": "R",
-                "subscript": "xy",
-                "superscript": null
+                "suffix": {
+                    "subscript": "xy",
+                    "superscript": null
+                }
             }
         },
         "_CNOT":
         {
-            "longName": "controlled not",
-            "description" : null,
+            "title": "CNOT gate",
+            "description" : "Controlled-not gate, whereby the first qubit is the control qubit and the second qubit is the target qubit.",
             "numberOfQubits" : 2,
             "parameters" : null,
             "semantics" : [
                 {
                     "type": "controlledGate",
-                    "kwargs":
+                    "args":
                     {
                         "targetGate": "_X"
                     }
@@ -386,14 +901,14 @@
         },
         "_CZ":
         {
-            "longName": "controlled phase",
-            "description" : null,
+            "title": "CPhase gate",
+            "description" : "Controlled-phase gate, whereby the first qubit is the control qubit and the second qubit is the target qubit.",
             "numberOfQubits" : 2,
             "parameters" : null,
             "semantics" : [
                 {
                     "type": "controlledGate",
-                    "kwargs":
+                    "args":
                     {
                         "targetGate": "_Z"
                     }
@@ -402,7 +917,7 @@
         },
         "_CP":
         {
-            "longName": null,
+            "title": null,
             "description" : null,
             "numberOfQubits" : 2,
             "parameters" : [
@@ -414,7 +929,7 @@
             "semantics" : [
                 {
                     "type": "controlledGate",
-                    "kwargs":
+                    "args":
                     {
                         "targetGate": "_P"
                     }
@@ -423,7 +938,7 @@
         },
         "_CPk":
         {
-            "longName": null,
+            "title": null,
             "description" : null,
             "numberOfQubits" : 2,
             "parameters" : [
@@ -435,7 +950,7 @@
             "semantics" : [
                 {
                     "type": "controlledGate",
-                    "kwargs":
+                    "args":
                     {
                         "targetGate": "_Pk"
                     }
