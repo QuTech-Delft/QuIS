@@ -1,9 +1,10 @@
 {
-    "gate_descriptions":
+    "descriptions":
     {
         "_I":
         {
             "title" : "Identity gate",
+            "instructionType": "unitary",
             "description" : "Identity gate.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -27,6 +28,7 @@
         "_H":
         {
             "title" : "Hadamard gate",
+            "instructionType": "unitary",
             "description" : "Hadamard gate.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -67,6 +69,7 @@
         "_X":
         {
             "title" : "Pauli-X gate",
+            "instructionType": "unitary",
             "description" : "Pauli X gate or bit flip. An anticlockwise rotation of $\\pi$ radians about the _x_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -107,6 +110,7 @@
         "_X90":
         {
             "title" : "X-90 gate",
+            "instructionType": "unitary",
             "description" : "An anticlockwise rotation of $\\pi/2$ radians about the _x_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -148,7 +152,8 @@
             "icon":
             {
                 "base": "X",
-                "suffix": {
+                "suffix":
+                {
                     "subscript": null,
                     "superscript": "half"
                 }
@@ -157,6 +162,7 @@
         "_mX90":
         {
             "title" : "X-minus-90 gate",
+            "instructionType": "unitary",
             "description" : "A clockwise rotation of $\\pi/2$ radians about the _x_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -198,7 +204,8 @@
             "icon":
             {
                 "base": "X",
-                "suffix": {
+                "suffix":
+                {
                     "subscript": null,
                     "superscript": "minushalf"
                 }
@@ -207,6 +214,7 @@
         "_Y":
         {
             "title" : "Pauli-Y gate",
+            "instructionType": "unitary",
             "description" : "Pauli Y gate. An anticlockwise rotation of $\\pi$ radians about the _y_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -247,6 +255,7 @@
         "_Y90":
         {
             "title" : "Y-90 gate",
+            "instructionType": "unitary",
             "description" : "An anticlockwise rotation of $\\pi/2$ radians about the _y_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -288,7 +297,8 @@
             "icon":
             {
                 "base": "Y",
-                "suffix": {
+                "suffix":
+                {
                     "subscript": null,
                     "superscript": "half"
                 }
@@ -297,6 +307,7 @@
         "_mY90":
         {
             "title" : "Y-minus-90 gate",
+            "instructionType": "unitary",
             "description" : "A clockwise rotation of $\\pi/2$ radians about the _y_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -338,7 +349,8 @@
             "icon":
             {
                 "base": "Y",
-                "suffix": {
+                "suffix":
+                {
                     "subscript": null,
                     "superscript": "minushalf"
                 }
@@ -347,6 +359,7 @@
         "_Z":
         {
             "title" : "Pauli-Z gate",
+            "instructionType": "unitary",
             "description" : "Pauli Z gate or phase flip. An anticlockwise rotation of $\\pi$ radians about the _z_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -387,6 +400,7 @@
         "_S":
         {
             "title" : "S gate",
+            "instructionType": "unitary",
             "description" : "An anticlockwise rotation of $\\pi/2$ radians about the _z_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -434,6 +448,7 @@
         "_Sdag":
         {
             "title" : "S-dagger gate",
+            "instructionType": "unitary",
             "description" : "A clockwise rotation of $\\pi/2$ radians about the _z_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -475,7 +490,8 @@
             "icon":
             {
                 "base": "S",
-                "suffix": {
+                "suffix":
+                {
                     "subscript": null,
                     "superscript": "dagger"
                 }
@@ -484,6 +500,7 @@
         "_T":
         {
             "title" : "T gate",
+            "instructionType": "unitary",
             "description" : "An anticlockwise rotation of $\\pi/4$ radians about the _z_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -531,6 +548,7 @@
         "_Tdag":
         {
             "title" : "T-dagger gate",
+            "instructionType": "unitary",
             "description" : "A clockwise rotation of $\\pi/4$ radians about the _z_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -572,7 +590,8 @@
             "icon":
             {
                 "base": "T",
-                "suffix": {
+                "suffix":
+                {
                     "subscript": null,
                     "superscript": "dagger"
                 }
@@ -581,6 +600,7 @@
         "_Rx":
         {
             "title" : "Rx gate",
+            "instructionType": "unitary",
             "description" : "An anticlockwise rotation of $\\theta$ radians about the _x_-axis.",
             "numberOfQubits" : 1,
             "parameters" : [
@@ -608,7 +628,8 @@
             "icon":
             {
                 "base": "R",
-                "suffix": {
+                "suffix":
+                {
                     "subscript": "x",
                     "superscript": null
                 }
@@ -617,6 +638,7 @@
         "_Ry":
         {
             "title" : "Ry gate",
+            "instructionType": "unitary",
             "description" : "An anticlockwise rotation of $\\theta$ radians about the _y_-axis.",
             "numberOfQubits" : 1,
             "parameters" : [
@@ -644,7 +666,8 @@
             "icon":
             {
                 "base": "R",
-                "suffix": {
+                "suffix":
+                {
                     "subscript": "y",
                     "superscript": null
                 }
@@ -653,6 +676,7 @@
         "_Rz":
         {
             "title" : "Rz gate",
+            "instructionType": "unitary",
             "description" : "An anticlockwise rotation of $\\theta$ radians about the _z_-axis.",
             "numberOfQubits" : 1,
             "parameters" : [
@@ -680,7 +704,8 @@
             "icon":
             {
                 "base": "R",
-                "suffix": {
+                "suffix":
+                {
                     "subscript": "z",
                     "superscript": null
                 }
@@ -689,6 +714,7 @@
         "_P":
         {
             "title" : "Phase gate",
+            "instructionType": "unitary",
             "description" : null,
             "numberOfQubits" : 1,
             "parameters" : [
@@ -728,7 +754,8 @@
             "icon":
             {
                 "base": "P",
-                "suffix": {
+                "suffix":
+                {
                     "subscript": "theta",
                     "superscript": null
                 }
@@ -737,6 +764,7 @@
         "_Pk":
         {
             "title" : "Phase-k gate",
+            "instructionType": "unitary",
             "description" : null,
             "numberOfQubits" : 1,
             "parameters" : [
@@ -813,7 +841,8 @@
             "icon":
             {
                 "base": "P",
-                "suffix": {
+                "suffix":
+                {
                     "subscript": "k",
                     "superscript": null
                 }
@@ -822,6 +851,7 @@
         "_Rxy":
         {
             "title" : "Rxy gate",
+            "instructionType": "unitary",
             "description" : null,
             "numberOfQubits" : 1,
             "parameters" : [
@@ -877,7 +907,8 @@
             "icon":
             {
                 "base": "R",
-                "suffix": {
+                "suffix":
+                {
                     "subscript": "xy",
                     "superscript": null
                 }
@@ -886,6 +917,7 @@
         "_CNOT":
         {
             "title": "CNOT gate",
+            "instructionType": "unitary",
             "description" : "Controlled-not gate, whereby the first qubit is the control qubit and the second qubit is the target qubit.",
             "numberOfQubits" : 2,
             "parameters" : null,
@@ -902,6 +934,7 @@
         "_CZ":
         {
             "title": "CPhase gate",
+            "instructionType": "unitary",
             "description" : "Controlled-phase gate, whereby the first qubit is the control qubit and the second qubit is the target qubit.",
             "numberOfQubits" : 2,
             "parameters" : null,
@@ -918,6 +951,7 @@
         "_CP":
         {
             "title": null,
+            "instructionType": "unitary",
             "description" : null,
             "numberOfQubits" : 2,
             "parameters" : [
@@ -939,6 +973,7 @@
         "_CPk":
         {
             "title": null,
+            "instructionType": "unitary",
             "description" : null,
             "numberOfQubits" : 2,
             "parameters" : [
@@ -956,9 +991,57 @@
                     }
                 }
             ]
+        },
+        "_init":
+        {
+            "title": "Init",
+            "instructionType": "nonUnitary",
+            "description": "Initialization of the qubit in the Z-basis",
+            "icon":
+            {
+                "base": "init",
+                "suffix": null
+            }
+        },
+        "_measure":
+        {
+            "title": "Measure",
+            "instructionType": "nonUnitary",
+            "description": "Measurement of the qubit in the Z-basis",
+            "icon":
+            {
+                "base": "measure",
+                "suffix": null
+            }
+        },
+        "_measure_X":
+        {
+            "title": "Measure-X",
+            "instructionType": "nonUnitary",
+            "description": "Measurement of the qubit in the X-basis",
+            "icon":
+            {
+                "base": "measure",
+                "suffix":
+                {
+                    "subscript" : "X",
+                    "superscript" : null
+                }
+            }
+        },
+        "_reset":
+        {
+            "title": "Reset",
+            "instructionType": "nonUnitary",
+            "description": "Resets qubit to ground state in the Z-basis",
+            "icon":
+            {
+                "base": "init",
+                "suffix": null
+            }
         }
     },
-    "gates":
+    "instructions":
     {
         "I": "_I",
         "H": "_H",
@@ -983,6 +1066,13 @@
         "CRk": "_CPk",
         "CPk": "_CPk",
         "Rxy": "_Rxy",
-        "rxy": "_Rxy"
+        "rxy": "_Rxy",
+        "init": "_init",
+        "init_Z": "_init",
+        "measure": "_measure",
+        "measure_Z": "_measure",
+        "measure_X": "_measure_X",
+        "reset": "_reset",
+        "reset_Z": "_reset"
     }
 }
