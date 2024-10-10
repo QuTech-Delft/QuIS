@@ -16,6 +16,3 @@ def as_dict() -> dict:
     with open(quis_json) as file:
         quis = json.load(file)
     return quis
-
-
-# if __name__ == "__main__":
