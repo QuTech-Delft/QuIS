@@ -4,7 +4,6 @@
         "_I":
         {
             "title" : "Identity gate",
-            "instructionType": "unitary",
             "description" : "Identity gate.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -28,7 +27,6 @@
         "_H":
         {
             "title" : "Hadamard gate",
-            "instructionType": "unitary",
             "description" : "Hadamard gate.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -69,7 +67,6 @@
         "_X":
         {
             "title" : "Pauli-X gate",
-            "instructionType": "unitary",
             "description" : "Pauli X gate or bit flip. An anticlockwise rotation of $\\pi$ radians about the _x_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -110,7 +107,6 @@
         "_X90":
         {
             "title" : "X-90 gate",
-            "instructionType": "unitary",
             "description" : "An anticlockwise rotation of $\\pi/2$ radians about the _x_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -162,7 +158,6 @@
         "_mX90":
         {
             "title" : "X-minus-90 gate",
-            "instructionType": "unitary",
             "description" : "A clockwise rotation of $\\pi/2$ radians about the _x_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -214,7 +209,6 @@
         "_Y":
         {
             "title" : "Pauli-Y gate",
-            "instructionType": "unitary",
             "description" : "Pauli Y gate. An anticlockwise rotation of $\\pi$ radians about the _y_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -255,7 +249,6 @@
         "_Y90":
         {
             "title" : "Y-90 gate",
-            "instructionType": "unitary",
             "description" : "An anticlockwise rotation of $\\pi/2$ radians about the _y_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -307,7 +300,6 @@
         "_mY90":
         {
             "title" : "Y-minus-90 gate",
-            "instructionType": "unitary",
             "description" : "A clockwise rotation of $\\pi/2$ radians about the _y_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -359,7 +351,6 @@
         "_Z":
         {
             "title" : "Pauli-Z gate",
-            "instructionType": "unitary",
             "description" : "Pauli Z gate or phase flip. An anticlockwise rotation of $\\pi$ radians about the _z_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -400,7 +391,6 @@
         "_S":
         {
             "title" : "S gate",
-            "instructionType": "unitary",
             "description" : "An anticlockwise rotation of $\\pi/2$ radians about the _z_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -448,7 +438,6 @@
         "_Sdag":
         {
             "title" : "S-dagger gate",
-            "instructionType": "unitary",
             "description" : "A clockwise rotation of $\\pi/2$ radians about the _z_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -500,7 +489,6 @@
         "_T":
         {
             "title" : "T gate",
-            "instructionType": "unitary",
             "description" : "An anticlockwise rotation of $\\pi/4$ radians about the _z_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -548,7 +536,6 @@
         "_Tdag":
         {
             "title" : "T-dagger gate",
-            "instructionType": "unitary",
             "description" : "A clockwise rotation of $\\pi/4$ radians about the _z_-axis.",
             "numberOfQubits" : 1,
             "parameters" : null,
@@ -600,7 +587,6 @@
         "_Rx":
         {
             "title" : "Rx gate",
-            "instructionType": "unitary",
             "description" : "An anticlockwise rotation of $\\theta$ radians about the _x_-axis.",
             "numberOfQubits" : 1,
             "parameters" : [
@@ -638,7 +624,6 @@
         "_Ry":
         {
             "title" : "Ry gate",
-            "instructionType": "unitary",
             "description" : "An anticlockwise rotation of $\\theta$ radians about the _y_-axis.",
             "numberOfQubits" : 1,
             "parameters" : [
@@ -676,7 +661,6 @@
         "_Rz":
         {
             "title" : "Rz gate",
-            "instructionType": "unitary",
             "description" : "An anticlockwise rotation of $\\theta$ radians about the _z_-axis.",
             "numberOfQubits" : 1,
             "parameters" : [
@@ -714,7 +698,6 @@
         "_P":
         {
             "title" : "Phase gate",
-            "instructionType": "unitary",
             "description" : null,
             "numberOfQubits" : 1,
             "parameters" : [
@@ -764,7 +747,6 @@
         "_Pk":
         {
             "title" : "Phase-k gate",
-            "instructionType": "unitary",
             "description" : null,
             "numberOfQubits" : 1,
             "parameters" : [
@@ -851,7 +833,6 @@
         "_Rxy":
         {
             "title" : "Rxy gate",
-            "instructionType": "unitary",
             "description" : null,
             "numberOfQubits" : 1,
             "parameters" : [
@@ -917,7 +898,6 @@
         "_CNOT":
         {
             "title": "CNOT gate",
-            "instructionType": "unitary",
             "description" : "Controlled-not gate, whereby the first qubit is the control qubit and the second qubit is the target qubit.",
             "numberOfQubits" : 2,
             "parameters" : null,
@@ -929,12 +909,16 @@
                         "targetGate": "_X"
                     }
                 }
-            ]
+            ],
+            "icon":
+            {
+                "base": "cnot",
+                "suffix": null
+            }
         },
         "_CZ":
         {
             "title": "CPhase gate",
-            "instructionType": "unitary",
             "description" : "Controlled-phase gate, whereby the first qubit is the control qubit and the second qubit is the target qubit.",
             "numberOfQubits" : 2,
             "parameters" : null,
@@ -946,12 +930,16 @@
                         "targetGate": "_Z"
                     }
                 }
-            ]
+            ],
+            "icon":
+            {
+                "base": "controlled",
+                "suffix": null
+            }
         },
         "_CP":
         {
             "title": null,
-            "instructionType": "unitary",
             "description" : null,
             "numberOfQubits" : 2,
             "parameters" : [
@@ -968,12 +956,16 @@
                         "targetGate": "_P"
                     }
                 }
-            ]
+            ],
+            "icon":
+            {
+                "base": "controlled",
+                "suffix": null
+            }
         },
         "_CPk":
         {
             "title": null,
-            "instructionType": "unitary",
             "description" : null,
             "numberOfQubits" : 2,
             "parameters" : [
@@ -990,12 +982,16 @@
                         "targetGate": "_Pk"
                     }
                 }
-            ]
+            ],
+            "icon":
+            {
+                "base": "controlled",
+                "suffix": null
+            }
         },
         "_init":
         {
             "title": "Init",
-            "instructionType": "nonUnitary",
             "description": "Initialization of the qubit in the Z-basis",
             "icon":
             {
@@ -1006,7 +1002,6 @@
         "_measure":
         {
             "title": "Measure",
-            "instructionType": "nonUnitary",
             "description": "Measurement of the qubit in the Z-basis",
             "icon":
             {
@@ -1017,7 +1012,6 @@
         "_measure_X":
         {
             "title": "Measure-X",
-            "instructionType": "nonUnitary",
             "description": "Measurement of the qubit in the X-basis",
             "icon":
             {
@@ -1032,8 +1026,8 @@
         "_reset":
         {
             "title": "Reset",
-            "instructionType": "nonUnitary",
             "description": "Resets qubit to ground state in the Z-basis",
+            "numberOfQubits": 1,
             "icon":
             {
                 "base": "init",
@@ -1043,36 +1037,42 @@
     },
     "instructions":
     {
-        "I": "_I",
-        "H": "_H",
-        "X": "_X",
-        "x": "_X",
-        "X90": "_X90",
-        "mX90": "_mX90",
-        "Y": "_Y",
-        "Y90": "_Y90",
-        "mY90": "_mY90",
-        "Z": "_Z",
-        "S": "_S",
-        "Sdag": "_Sdag",
-        "T": "_T",
-        "Tdag": "_Tdag",
-        "Rx": "_Rx",
-        "Ry": "_Ry",
-        "Rz": "_Rz",
-        "CNOT": "_CNOT",
-        "CZ": "_CZ",
-        "CR": "_CP",
-        "CRk": "_CPk",
-        "CPk": "_CPk",
-        "Rxy": "_Rxy",
-        "rxy": "_Rxy",
-        "init": "_init",
-        "init_Z": "_init",
-        "measure": "_measure",
-        "measure_Z": "_measure",
-        "measure_X": "_measure_X",
-        "reset": "_reset",
-        "reset_Z": "_reset"
+        "unitary":
+        {
+            "I": "_I",
+            "H": "_H",
+            "X": "_X",
+            "x": "_X",
+            "X90": "_X90",
+            "mX90": "_mX90",
+            "Y": "_Y",
+            "Y90": "_Y90",
+            "mY90": "_mY90",
+            "Z": "_Z",
+            "S": "_S",
+            "Sdag": "_Sdag",
+            "T": "_T",
+            "Tdag": "_Tdag",
+            "Rx": "_Rx",
+            "Ry": "_Ry",
+            "Rz": "_Rz",
+            "CNOT": "_CNOT",
+            "CZ": "_CZ",
+            "CR": "_CP",
+            "CRk": "_CPk",
+            "CPk": "_CPk",
+            "Rxy": "_Rxy",
+            "rxy": "_Rxy"
+        },
+        "nonUnitary":
+        {
+            "init": "_init",
+            "init_Z": "_init",
+            "measure": "_measure",
+            "measure_Z": "_measure",
+            "measure_X": "_measure_X",
+            "reset": "_reset",
+            "reset_Z": "_reset"
+        }
     }
 }
