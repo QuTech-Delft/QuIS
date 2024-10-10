@@ -989,6 +989,19 @@
                 "suffix": null
             }
         },
+        "_SWAP":
+        {
+            "title": "SWAP gate",
+            "description" : "SWAP gate",
+            "numberOfQubits" : 2,
+            "parameters" : null,
+            "semantics" : null,
+            "icon":
+            {
+                "base": "swap",
+                "suffix": null
+            }
+        },
         "_init":
         {
             "title": "Init",
@@ -1062,7 +1075,8 @@
             "CRk": "_CPk",
             "CPk": "_CPk",
             "Rxy": "_Rxy",
-            "rxy": "_Rxy"
+            "rxy": "_Rxy",
+            "SWAP": "_SWAP"
         },
         "nonUnitary":
         {
