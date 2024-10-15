@@ -830,71 +830,6 @@
                 }
             }
         },
-        "_Rxy":
-        {
-            "title" : "Rxy gate",
-            "description" : null,
-            "numberOfQubits" : 1,
-            "parameters" : [
-                {
-                    "reference" : "theta",
-                    "type" : "float"
-                },
-                {
-                    "reference" : "phi",
-                    "type" : "float"
-                }
-            ],
-            "semantics" : [
-                {
-                    "type" : "blochSphereRotation",
-                    "args" :
-                    {
-                        "axis" : [
-                            {
-                                "type" : "operator",
-                                "value" : "cos",
-                                "args" : [
-                                    {
-                                        "type" : "parameter",
-                                        "value" : "phi",
-                                        "args": null
-                                    }
-                                ]
-                            },
-                            {
-                                "type" : "operator",
-                                "value" : "sin",
-                                "args" : [
-                                    {
-                                        "type" : "parameter",
-                                        "value" : "phi",
-                                        "args": null
-                                    }
-                                ]
-                            },
-                            0
-                        ],
-                        "angle" :
-                        {
-                            "type" : "parameter",
-                            "value" : "theta",
-                            "args": null
-                        },
-                        "globalPhase" : 0
-                    }
-                }
-            ],
-            "icon":
-            {
-                "base": "R",
-                "suffix":
-                {
-                    "subscript": "xy",
-                    "superscript": null
-                }
-            }
-        },
         "_CNOT":
         {
             "title": "CNOT gate",
@@ -937,7 +872,7 @@
                 "suffix": null
             }
         },
-        "_CP":
+        "_CR":
         {
             "title": null,
             "description" : null,
@@ -963,7 +898,7 @@
                 "suffix": null
             }
         },
-        "_CPk":
+        "_CRk":
         {
             "title": null,
             "description" : null,
@@ -989,29 +924,6 @@
                 "suffix": null
             }
         },
-        "_SWAP":
-        {
-            "title": "SWAP gate",
-            "description" : "SWAP gate",
-            "numberOfQubits" : 2,
-            "parameters" : null,
-            "semantics" : null,
-            "icon":
-            {
-                "base": "swap",
-                "suffix": null
-            }
-        },
-        "_init":
-        {
-            "title": "Init",
-            "description": "Initialization of the qubit in the Z-basis",
-            "icon":
-            {
-                "base": "init",
-                "suffix": null
-            }
-        },
         "_measure":
         {
             "title": "Measure",
@@ -1020,20 +932,6 @@
             {
                 "base": "measure",
                 "suffix": null
-            }
-        },
-        "_measure_X":
-        {
-            "title": "Measure-X",
-            "description": "Measurement of the qubit in the X-basis",
-            "icon":
-            {
-                "base": "measure",
-                "suffix":
-                {
-                    "subscript" : "X",
-                    "superscript" : null
-                }
             }
         },
         "_reset":
@@ -1055,7 +953,6 @@
             "I": "_I",
             "H": "_H",
             "X": "_X",
-            "x": "_X",
             "X90": "_X90",
             "mX90": "_mX90",
             "Y": "_Y",
@@ -1071,22 +968,13 @@
             "Rz": "_Rz",
             "CNOT": "_CNOT",
             "CZ": "_CZ",
-            "CR": "_CP",
-            "CRk": "_CPk",
-            "CPk": "_CPk",
-            "Rxy": "_Rxy",
-            "rxy": "_Rxy",
-            "SWAP": "_SWAP"
+            "CR": "_CR",
+            "CRk": "_CRk"
         },
         "nonUnitary":
         {
-            "init": "_init",
-            "init_Z": "_init",
             "measure": "_measure",
-            "measure_Z": "_measure",
-            "measure_X": "_measure_X",
-            "reset": "_reset",
-            "reset_Z": "_reset"
+            "reset": "_reset"
         }
     }
 }
