@@ -941,7 +941,7 @@
             "numberOfQubits": 1,
             "icon":
             {
-                "base": "init",
+                "base": "reset",
                 "suffix": null
             }
         }
