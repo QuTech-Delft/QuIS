@@ -6,7 +6,6 @@
             "title": "CNOT gate",
             "description": "Controlled-not gate, whereby the first qubit is the control qubit and the second qubit is the target qubit.",
             "numberOfQubits": 2,
-            "parameters": null,
             "semantics":
             [
                 {
@@ -19,14 +18,11 @@
             ],
             "icon":
             {
-                "base": "cnot",
-                "suffix": null
+                "base": "cnot"
             }
         },
         "_CR":
         {
-            "title": null,
-            "description": null,
             "numberOfQubits": 2,
             "parameters":
             [
@@ -47,14 +43,11 @@
             ],
             "icon":
             {
-                "base": "controlled",
-                "suffix": null
+                "base": "controlled"
             }
         },
         "_CRk":
         {
-            "title": null,
-            "description": null,
             "numberOfQubits": 2,
             "parameters":
             [
@@ -75,8 +68,7 @@
             ],
             "icon":
             {
-                "base": "controlled",
-                "suffix": null
+                "base": "controlled"
             }
         },
         "_CZ":
@@ -84,7 +76,6 @@
             "title": "CPhase gate",
             "description": "Controlled-phase gate, whereby the first qubit is the control qubit and the second qubit is the target qubit.",
             "numberOfQubits": 2,
-            "parameters": null,
             "semantics":
             [
                 {
@@ -97,8 +88,7 @@
             ],
             "icon":
             {
-                "base": "controlled",
-                "suffix": null
+                "base": "controlled"
             }
         },
         "_H":
@@ -106,7 +96,6 @@
             "title": "Hadamard gate",
             "description": "Hadamard gate.",
             "numberOfQubits": 1,
-            "parameters": null,
             "semantics":
             [
                 {
@@ -122,8 +111,7 @@
                         "angle":
                         {
                             "type": "constant",
-                            "value": "pi",
-                            "args": null
+                            "value": "pi"
                         },
                         "globalPhase":
                         {
@@ -133,8 +121,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 2
                             ]
@@ -144,8 +131,7 @@
             ],
             "icon":
             {
-                "base": "H",
-                "suffix": null
+                "base": "H"
             }
         },
         "_I":
@@ -153,7 +139,6 @@
             "title": "Identity gate",
             "description": "Identity gate.",
             "numberOfQubits": 1,
-            "parameters": null,
             "semantics":
             [
                 {
@@ -173,14 +158,12 @@
             ],
             "icon":
             {
-                "base": "I",
-                "suffix": null
+                "base": "I"
             }
         },
         "_P":
         {
             "title": "Phase gate",
-            "description": null,
             "numberOfQubits": 1,
             "parameters":
             [
@@ -204,8 +187,7 @@
                         "angle":
                         {
                             "type": "parameter",
-                            "value": "theta",
-                            "args": null
+                            "value": "theta"
                         },
                         "globalPhase":
                         {
@@ -215,8 +197,7 @@
                             [
                                 {
                                     "type": "parameter",
-                                    "value": "theta",
-                                    "args": null
+                                    "value": "theta"
                                 },
                                 2
                             ]
@@ -229,15 +210,13 @@
                 "base": "P",
                 "suffix":
                 {
-                    "subscript": "theta",
-                    "superscript": null
+                    "subscript": "theta"
                 }
             }
         },
         "_Pk":
         {
             "title": "Phase-k gate",
-            "description": null,
             "numberOfQubits": 1,
             "parameters":
             [
@@ -272,8 +251,7 @@
                                         2,
                                         {
                                             "type": "constant",
-                                            "value": "pi",
-                                            "args": null
+                                            "value": "pi"
                                         }
                                     ]
                                 },
@@ -285,8 +263,7 @@
                                         2,
                                         {
                                             "type": "parameter",
-                                            "value": "k",
-                                            "args": null
+                                            "value": "k"
                                         }
                                     ]
                                 }
@@ -300,8 +277,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 {
                                     "type": "operator",
@@ -311,8 +287,7 @@
                                         2,
                                         {
                                             "type": "parameter",
-                                            "value": "k",
-                                            "args": null
+                                            "value": "k"
                                         }
                                     ]
                                 }
@@ -326,8 +301,7 @@
                 "base": "P",
                 "suffix":
                 {
-                    "subscript": "k",
-                    "superscript": null
+                    "subscript": "k"
                 }
             }
         },
@@ -358,8 +332,7 @@
                         "angle":
                         {
                             "type": "parameter",
-                            "value": "theta",
-                            "args": null
+                            "value": "theta"
                         },
                         "globalPhase": 0
                     }
@@ -370,8 +343,7 @@
                 "base": "R",
                 "suffix":
                 {
-                    "subscript": "x",
-                    "superscript": null
+                    "subscript": "x"
                 }
             }
         },
@@ -402,8 +374,7 @@
                         "angle":
                         {
                             "type": "parameter",
-                            "value": "theta",
-                            "args": null
+                            "value": "theta"
                         },
                         "globalPhase": 0
                     }
@@ -414,8 +385,7 @@
                 "base": "R",
                 "suffix":
                 {
-                    "subscript": "y",
-                    "superscript": null
+                    "subscript": "y"
                 }
             }
         },
@@ -446,8 +416,7 @@
                         "angle":
                         {
                             "type": "parameter",
-                            "value": "theta",
-                            "args": null
+                            "value": "theta"
                         },
                         "globalPhase": 0
                     }
@@ -458,8 +427,7 @@
                 "base": "R",
                 "suffix":
                 {
-                    "subscript": "z",
-                    "superscript": null
+                    "subscript": "z"
                 }
             }
         },
@@ -468,7 +436,6 @@
             "title": "S gate",
             "description": "An anticlockwise rotation of $\\pi/2$ radians about the _z_-axis.",
             "numberOfQubits": 1,
-            "parameters": null,
             "semantics":
             [
                 {
@@ -489,8 +456,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 2
                             ]
@@ -503,8 +469,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 4
                             ]
@@ -514,8 +479,7 @@
             ],
             "icon":
             {
-                "base": "S",
-                "suffix": null
+                "base": "S"
             }
         },
         "_Sdag":
@@ -523,7 +487,6 @@
             "title": "S-dagger gate",
             "description": "A clockwise rotation of $\\pi/2$ radians about the _z_-axis.",
             "numberOfQubits": 1,
-            "parameters": null,
             "semantics":
             [
                 {
@@ -544,8 +507,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 -2
                             ]
@@ -558,8 +520,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 -4
                             ]
@@ -572,7 +533,6 @@
                 "base": "S",
                 "suffix":
                 {
-                    "subscript": null,
                     "superscript": "dagger"
                 }
             }
@@ -582,7 +542,6 @@
             "title": "T gate",
             "description": "An anticlockwise rotation of $\\pi/4$ radians about the _z_-axis.",
             "numberOfQubits": 1,
-            "parameters": null,
             "semantics":
             [
                 {
@@ -603,8 +562,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 4
                             ]
@@ -617,8 +575,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 8
                             ]
@@ -628,8 +585,7 @@
             ],
             "icon":
             {
-                "base": "T",
-                "suffix": null
+                "base": "T"
             }
         },
         "_Tdag":
@@ -637,7 +593,6 @@
             "title": "T-dagger gate",
             "description": "A clockwise rotation of $\\pi/4$ radians about the _z_-axis.",
             "numberOfQubits": 1,
-            "parameters": null,
             "semantics":
             [
                 {
@@ -658,8 +613,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 -4
                             ]
@@ -672,8 +626,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 -8
                             ]
@@ -686,7 +639,6 @@
                 "base": "T",
                 "suffix":
                 {
-                    "subscript": null,
                     "superscript": "dagger"
                 }
             }
@@ -696,7 +648,6 @@
             "title": "Pauli-X gate",
             "description": "Pauli X gate or bit flip. An anticlockwise rotation of $\\pi$ radians about the _x_-axis.",
             "numberOfQubits": 1,
-            "parameters": null,
             "semantics":
             [
                 {
@@ -712,8 +663,7 @@
                         "angle":
                         {
                             "type": "constant",
-                            "value": "pi",
-                            "args": null
+                            "value": "pi"
                         },
                         "globalPhase":
                         {
@@ -723,8 +673,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 2
                             ]
@@ -734,8 +683,7 @@
             ],
             "icon":
             {
-                "base": "X",
-                "suffix": null
+                "base": "X"
             }
         },
         "_X90":
@@ -743,7 +691,6 @@
             "title": "X-90 gate",
             "description": "An anticlockwise rotation of $\\pi/2$ radians about the _x_-axis.",
             "numberOfQubits": 1,
-            "parameters": null,
             "semantics":
             [
                 {
@@ -764,8 +711,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 2
                             ]
@@ -778,8 +724,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 4
                             ]
@@ -792,7 +737,6 @@
                 "base": "X",
                 "suffix":
                 {
-                    "subscript": null,
                     "superscript": "half"
                 }
             }
@@ -802,7 +746,6 @@
             "title": "Pauli-Y gate",
             "description": "Pauli Y gate. An anticlockwise rotation of $\\pi$ radians about the _y_-axis.",
             "numberOfQubits": 1,
-            "parameters": null,
             "semantics":
             [
                 {
@@ -818,8 +761,7 @@
                         "angle":
                         {
                             "type": "constant",
-                            "value": "pi",
-                            "args": null
+                            "value": "pi"
                         },
                         "globalPhase":
                         {
@@ -829,8 +771,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 2
                             ]
@@ -840,8 +781,7 @@
             ],
             "icon":
             {
-                "base": "Y",
-                "suffix": null
+                "base": "Y"
             }
         },
         "_Y90":
@@ -849,7 +789,6 @@
             "title": "Y-90 gate",
             "description": "An anticlockwise rotation of $\\pi/2$ radians about the _y_-axis.",
             "numberOfQubits": 1,
-            "parameters": null,
             "semantics":
             [
                 {
@@ -870,8 +809,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 2
                             ]
@@ -884,8 +822,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 4
                             ]
@@ -898,7 +835,6 @@
                 "base": "Y",
                 "suffix":
                 {
-                    "subscript": null,
                     "superscript": "half"
                 }
             }
@@ -908,7 +844,6 @@
             "title": "Pauli-Z gate",
             "description": "Pauli Z gate or phase flip. An anticlockwise rotation of $\\pi$ radians about the _z_-axis.",
             "numberOfQubits": 1,
-            "parameters": null,
             "semantics":
             [
                 {
@@ -924,8 +859,7 @@
                         "angle":
                         {
                             "type": "constant",
-                            "value": "pi",
-                            "args": null
+                            "value": "pi"
                         },
                         "globalPhase":
                         {
@@ -935,8 +869,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 2
                             ]
@@ -946,8 +879,7 @@
             ],
             "icon":
             {
-                "base": "Z",
-                "suffix": null
+                "base": "Z"
             }
         },
         "_mX90":
@@ -955,7 +887,6 @@
             "title": "X-minus-90 gate",
             "description": "A clockwise rotation of $\\pi/2$ radians about the _x_-axis.",
             "numberOfQubits": 1,
-            "parameters": null,
             "semantics":
             [
                 {
@@ -976,8 +907,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 -2
                             ]
@@ -990,8 +920,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 -4
                             ]
@@ -1004,7 +933,6 @@
                 "base": "X",
                 "suffix":
                 {
-                    "subscript": null,
                     "superscript": "minushalf"
                 }
             }
@@ -1014,7 +942,6 @@
             "title": "Y-minus-90 gate",
             "description": "A clockwise rotation of $\\pi/2$ radians about the _y_-axis.",
             "numberOfQubits": 1,
-            "parameters": null,
             "semantics":
             [
                 {
@@ -1035,8 +962,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 -2
                             ]
@@ -1049,8 +975,7 @@
                             [
                                 {
                                     "type": "constant",
-                                    "value": "pi",
-                                    "args": null
+                                    "value": "pi"
                                 },
                                 -4
                             ]
@@ -1063,7 +988,6 @@
                 "base": "Y",
                 "suffix":
                 {
-                    "subscript": null,
                     "superscript": "minushalf"
                 }
             }
@@ -1074,8 +998,7 @@
             "description": "Measurement of the qubit in the Z-basis",
             "icon":
             {
-                "base": "measure",
-                "suffix": null
+                "base": "measure"
             }
         },
         "_reset":
@@ -1085,8 +1008,7 @@
             "numberOfQubits": 1,
             "icon":
             {
-                "base": "reset",
-                "suffix": null
+                "base": "reset"
             }
         }
     },
