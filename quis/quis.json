@@ -104,17 +104,6 @@
                 "targetGate": "_Z"
             }
         },
-        "_Fredkin":
-        {
-            "title": "Fredkin gate",
-           "description": "Controlled SWAP",
-            "numberOfQubits": 3,
-            "semantics": [],
-            "icon":
-            {
-                "base": "C-SWAP"
-            }
-        },
         "_H":
         {
             "title": "Hadamard gate",
@@ -195,45 +184,6 @@
                 "base": "init"
             }
         },
-        "_init_X":
-        {
-            "title": "Init-X",
-            "description": "Initializes qubits in the X-basis",
-            "numberOfQubits": 1,
-            "icon":
-            {
-                "base": "init",
-                "suffix": {
-                    "subscript": "X"
-                }
-            }
-        },
-        "_init_Y":
-        {
-            "title": "Init-Y",
-            "description": "Initializes qubits in the Y-basis",
-            "numberOfQubits": 1,
-            "icon":
-            {
-                "base": "init",
-                "suffix": {
-                    "subscript": "Y"
-                }
-            }
-        },
-        "_init_Z":
-        {
-            "title": "Init-Z",
-            "description": "Initializes qubits in the Z-basis",
-            "numberOfQubits": 1,
-            "icon":
-            {
-                "base": "init",
-                "suffix": {
-                    "subscript": "Z"
-                }
-            }
-        },
         "_measure":
         {
             "title": "Measure",
@@ -241,42 +191,6 @@
             "icon":
             {
                 "base": "measure"
-            }
-        },
-        "_measure_X":
-        {
-            "title": "Measure-X",
-            "description": "Measurement of the qubit in the X-basis",
-            "icon":
-            {
-                "base": "measure",
-                "suffix": {
-                    "subscript": "X"
-                }
-            }
-        },
-        "_measure_Y":
-        {
-            "title": "Measure-Y",
-            "description": "Measurement of the qubit in the Y-basis",
-            "icon":
-            {
-                "base": "measure",
-                "suffix": {
-                    "subscript": "Y"
-                }
-            }
-        },
-        "_measure_Z":
-        {
-            "title": "Measure-Z",
-            "description": "Measurement of the qubit in the Z-basis",
-            "icon":
-            {
-                "base": "measure",
-                "suffix": {
-                    "subscript": "Z"
-                }
             }
         },
         "_mX90":
@@ -543,45 +457,6 @@
                 "base": "reset"
             }
         },
-        "_reset_X":
-        {
-            "title": "Reset-X",
-            "description": "Resets qubit to ground state in the X-basis",
-            "numberOfQubits": 1,
-            "icon":
-            {
-                "base": "reset",
-                "suffix": {
-                    "subscript": "X"
-                }
-            }
-        },
-        "_reset_Y":
-        {
-            "title": "Reset-Y",
-            "description": "Resets qubit to ground state in the Y-basis",
-            "numberOfQubits": 1,
-            "icon":
-            {
-                "base": "reset",
-                "suffix": {
-                    "subscript": "Y"
-                }
-            }
-        },
-        "_reset_Z":
-        {
-            "title": "Reset-Z",
-            "description": "Resets qubit to ground state in the Z-basis",
-            "numberOfQubits": 1,
-            "icon":
-            {
-                "base": "reset",
-                "suffix": {
-                    "subscript": "Z"
-                }
-            }
-        },
         "_Rx":
         {
             "title": "Rx gate",
@@ -814,36 +689,6 @@
                 }
             }
         },
-        "_sqrtSWAP":
-        {
-            "title": "sqrtSWAP gate",
-            "description": "Square root of SWAPs.",
-            "numberOfQubits": 2,
-            "semantics":
-            [
-                {
-                    "type": "matrixGate",
-                    "args":
-                    {
-                        "matrix":
-                        [
-                            [1, 0, 0, 0],
-                            [0, (1 + i) / 2, (1 - i) / 2, 0],
-                            [0, (1 - i) / 2, (1 + i) / 2, 0],
-                            [0, 0, 0, 1]
-                        ]
-                    }
-                }
-            ],
-            "icon":
-            {
-                "base": "SWAP",
-                "suffix":
-                {
-                    "superscript": "half"
-                }
-            }
-        },
         "_SWAP":
         {
             "title": "SWAP gate",
@@ -867,7 +712,7 @@
             ],
             "icon":
             {
-                "base": "swap",
+                "base": "swap"
             }
         },
         "_T":
@@ -974,17 +819,6 @@
                 {
                     "superscript": "dagger"
                 }
-            }
-        },
-        "_Toffoli":
-        {
-            "title": "Toffoli gate",
-           "description": "Controlled controlled not",
-            "numberOfQubits": 3,
-            "semantics": [],
-            "icon":
-            {
-                "base": "C-CNOT"
             }
         },
         "_wait":
@@ -1245,7 +1079,6 @@
             "CR": "_CR",
             "CRk": "_CRk",
             "CZ": "_CZ",
-            "Fredkin": "_Fredkin",
             "H": "_H",
             "I": "_I",
             "Rx": "_Rx",
@@ -1253,10 +1086,8 @@
             "Rz": "_Rz",
             "S": "_S",
             "Sdag": "_Sdag",
-            "sqrtSWAP": "_sqrtSWAP",
             "SWAP": "_SWAP",
             "T": "_T",
-            "Toffoli": "_Toffoli",
             "Tdag": "_Tdag",
             "X": "_X",
             "X90": "_X90",
@@ -1269,17 +1100,8 @@
         "nonUnitary":
         {
             "init": "_init",
-            "init_X": "_init_X",
-            "init_Y": "_init_Y",
-            "init_Z": "_init_Z",
             "measure": "_measure",
-            "measure_X": "_measure_X",
-            "measure_Y": "_measure_Y",
-            "measure_Z": "_measure_Z",
-            "reset": "_reset",
-            "reset_X": "_reset_X",
-            "reset_Y": "_reset_Y",
-            "reset_Z": "_reset_Z"
+            "reset": "_reset"
         },
         "directive":
         {
