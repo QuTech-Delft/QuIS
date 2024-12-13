@@ -4,7 +4,7 @@
         "_barrier":
         {
             "title": "Barrier",
-            "description": "Barrier directive",
+            "description": "Barrier control instruction",
             "numberOfQubits": 1,
             "icon":
             {
@@ -824,7 +824,7 @@
         "_wait":
         {
             "title": "Wait",
-            "description": "Wait directive",
+            "description": "Wait control instruction",
             "numberOfQubits": 1,
             "icon":
             {
@@ -1103,7 +1103,7 @@
             "measure": "_measure",
             "reset": "_reset"
         },
-        "directive":
+        "control":
         {
             "barrier": "_barrier",
             "wait": "_wait"
