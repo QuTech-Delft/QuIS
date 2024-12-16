@@ -1,6 +1,16 @@
 {
     "descriptions":
     {
+        "_barrier":
+        {
+            "title": "Barrier",
+            "description": "Barrier control instruction",
+            "numberOfQubits": 1,
+            "icon":
+            {
+                "base": "barrier"
+            }
+        },
         "_CNOT":
         {
             "title": "CNOT gate",
@@ -43,7 +53,8 @@
             ],
             "icon":
             {
-                "base": "controlled"
+                "base": "controlled",
+                "targetGate": "_P"
             }
         },
         "_CRk":
@@ -68,7 +79,8 @@
             ],
             "icon":
             {
-                "base": "controlled"
+                "base": "controlled",
+                "targetGate": "_Pk"
             }
         },
         "_CZ":
@@ -88,7 +100,8 @@
             ],
             "icon":
             {
-                "base": "controlled"
+                "base": "controlled",
+                "targetGate": "_Z"
             }
         },
         "_H":
@@ -159,6 +172,135 @@
             "icon":
             {
                 "base": "I"
+            }
+        },
+        "_init":
+        {
+            "title": "Init",
+            "description": "Initializes qubits in the Z-basis",
+            "numberOfQubits": 1,
+            "icon":
+            {
+                "base": "init"
+            }
+        },
+        "_measure":
+        {
+            "title": "Measure",
+            "description": "Measurement of the qubit in the Z-basis",
+            "icon":
+            {
+                "base": "measure"
+            }
+        },
+        "_mX90":
+        {
+            "title": "X-minus-90 gate",
+            "description": "A clockwise rotation of $\\pi/2$ radians about the _x_-axis.",
+            "numberOfQubits": 1,
+            "semantics":
+            [
+                {
+                    "type": "blochSphereRotation",
+                    "args":
+                    {
+                        "axis":
+                        [
+                            1,
+                            0,
+                            0
+                        ],
+                        "angle":
+                        {
+                            "type": "operator",
+                            "value": "frac",
+                            "args":
+                            [
+                                {
+                                    "type": "constant",
+                                    "value": "pi"
+                                },
+                                -2
+                            ]
+                        },
+                        "globalPhase":
+                        {
+                            "type": "operator",
+                            "value": "frac",
+                            "args":
+                            [
+                                {
+                                    "type": "constant",
+                                    "value": "pi"
+                                },
+                                -4
+                            ]
+                        }
+                    }
+                }
+            ],
+            "icon":
+            {
+                "base": "X",
+                "suffix":
+                {
+                    "superscript": "minushalf"
+                }
+            }
+        },
+        "_mY90":
+        {
+            "title": "Y-minus-90 gate",
+            "description": "A clockwise rotation of $\\pi/2$ radians about the _y_-axis.",
+            "numberOfQubits": 1,
+            "semantics":
+            [
+                {
+                    "type": "blochSphereRotation",
+                    "args":
+                    {
+                        "axis":
+                        [
+                            0,
+                            1,
+                            0
+                        ],
+                        "angle":
+                        {
+                            "type": "operator",
+                            "value": "frac",
+                            "args":
+                            [
+                                {
+                                    "type": "constant",
+                                    "value": "pi"
+                                },
+                                -2
+                            ]
+                        },
+                        "globalPhase":
+                        {
+                            "type": "operator",
+                            "value": "frac",
+                            "args":
+                            [
+                                {
+                                    "type": "constant",
+                                    "value": "pi"
+                                },
+                                -4
+                            ]
+                        }
+                    }
+                }
+            ],
+            "icon":
+            {
+                "base": "Y",
+                "suffix":
+                {
+                    "superscript": "minushalf"
+                }
             }
         },
         "_P":
@@ -303,6 +445,16 @@
                 {
                     "subscript": "k"
                 }
+            }
+        },
+        "_reset":
+        {
+            "title": "Reset",
+            "description": "Resets qubit to ground state in the Z-basis",
+            "numberOfQubits": 1,
+            "icon":
+            {
+                "base": "reset"
             }
         },
         "_Rx":
@@ -537,6 +689,32 @@
                 }
             }
         },
+        "_SWAP":
+        {
+            "title": "SWAP gate",
+            "description": "SWAPs.",
+            "numberOfQubits": 2,
+            "semantics":
+            [
+                {
+                    "type": "matrixGate",
+                    "args":
+                    {
+                        "matrix":
+                        [
+                            [1, 0, 0, 0],
+                            [0, 0, 1, 0],
+                            [0, 1, 0, 0],
+                            [0, 0, 0, 1]
+                        ]
+                    }
+                }
+            ],
+            "icon":
+            {
+                "base": "swap"
+            }
+        },
         "_T":
         {
             "title": "T gate",
@@ -641,6 +819,16 @@
                 {
                     "superscript": "dagger"
                 }
+            }
+        },
+        "_wait":
+        {
+            "title": "Wait",
+            "description": "Wait control instruction",
+            "numberOfQubits": 1,
+            "icon":
+            {
+                "base": "wait"
             }
         },
         "_X":
@@ -881,135 +1069,6 @@
             {
                 "base": "Z"
             }
-        },
-        "_mX90":
-        {
-            "title": "X-minus-90 gate",
-            "description": "A clockwise rotation of $\\pi/2$ radians about the _x_-axis.",
-            "numberOfQubits": 1,
-            "semantics":
-            [
-                {
-                    "type": "blochSphereRotation",
-                    "args":
-                    {
-                        "axis":
-                        [
-                            1,
-                            0,
-                            0
-                        ],
-                        "angle":
-                        {
-                            "type": "operator",
-                            "value": "frac",
-                            "args":
-                            [
-                                {
-                                    "type": "constant",
-                                    "value": "pi"
-                                },
-                                -2
-                            ]
-                        },
-                        "globalPhase":
-                        {
-                            "type": "operator",
-                            "value": "frac",
-                            "args":
-                            [
-                                {
-                                    "type": "constant",
-                                    "value": "pi"
-                                },
-                                -4
-                            ]
-                        }
-                    }
-                }
-            ],
-            "icon":
-            {
-                "base": "X",
-                "suffix":
-                {
-                    "superscript": "minushalf"
-                }
-            }
-        },
-        "_mY90":
-        {
-            "title": "Y-minus-90 gate",
-            "description": "A clockwise rotation of $\\pi/2$ radians about the _y_-axis.",
-            "numberOfQubits": 1,
-            "semantics":
-            [
-                {
-                    "type": "blochSphereRotation",
-                    "args":
-                    {
-                        "axis":
-                        [
-                            0,
-                            1,
-                            0
-                        ],
-                        "angle":
-                        {
-                            "type": "operator",
-                            "value": "frac",
-                            "args":
-                            [
-                                {
-                                    "type": "constant",
-                                    "value": "pi"
-                                },
-                                -2
-                            ]
-                        },
-                        "globalPhase":
-                        {
-                            "type": "operator",
-                            "value": "frac",
-                            "args":
-                            [
-                                {
-                                    "type": "constant",
-                                    "value": "pi"
-                                },
-                                -4
-                            ]
-                        }
-                    }
-                }
-            ],
-            "icon":
-            {
-                "base": "Y",
-                "suffix":
-                {
-                    "superscript": "minushalf"
-                }
-            }
-        },
-        "_measure":
-        {
-            "title": "Measure",
-            "description": "Measurement of the qubit in the Z-basis",
-            "icon":
-            {
-                "base": "measure"
-            }
-        },
-        "_reset":
-        {
-            "title": "Reset",
-            "description": "Resets qubit to ground state in the Z-basis",
-            "numberOfQubits": 1,
-            "icon":
-            {
-                "base": "reset"
-            }
         }
     },
     "instructions":
@@ -1027,6 +1086,7 @@
             "Rz": "_Rz",
             "S": "_S",
             "Sdag": "_Sdag",
+            "SWAP": "_SWAP",
             "T": "_T",
             "Tdag": "_Tdag",
             "X": "_X",
@@ -1039,8 +1099,14 @@
         },
         "nonUnitary":
         {
+            "init": "_init",
             "measure": "_measure",
             "reset": "_reset"
+        },
+        "control":
+        {
+            "barrier": "_barrier",
+            "wait": "_wait"
         }
     }
 }
