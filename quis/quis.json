@@ -349,7 +349,7 @@
             ],
             "icon":
             {
-                "base": "P",
+                "base": "R",
                 "suffix":
                 {
                     "subscript": "theta"
@@ -440,7 +440,7 @@
             ],
             "icon":
             {
-                "base": "P",
+                "base": "R",
                 "suffix":
                 {
                     "subscript": "k"
