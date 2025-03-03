@@ -5,6 +5,8 @@
     "type": "git",
     "url": "https://github.com/QuTech-Delft/QuIS.git"
   },
-  "files": "./quis/quis.json",
+  "files": [
+    "./quis/quis.json"
+  ],
   "exports": "./quis/quis.json"
 }
