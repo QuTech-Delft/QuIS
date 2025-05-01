@@ -19,3 +19,4 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - `SWAP` two-qubit unitary description to `quis.json`
 - `barrier` and `wait` control instruction descriptions to `quis.json`
 - `control` field to instructions in `quis.json`
+- Package release workflow
