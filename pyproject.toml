@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "quis"
-version = "0.0.1"
+version = "0.1.0"
 authors = ["Quantum Inspire <support@quantum-inspire.com>"]
 description = "A Quantum Instruction Set"
 license = "Apache-2.0"
