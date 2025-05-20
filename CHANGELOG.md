@@ -22,6 +22,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - `control` field to instructions in `quis.json`
 - Package release workflow (publish to `PyPI` and `npm`)
 
-## Changed
+### Changed
 
 - Name of `npm` package to `qutech-quis`
