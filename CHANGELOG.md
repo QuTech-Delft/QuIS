@@ -11,7 +11,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * **Fixed** for any bug fixes.
 * **Security** in case of vulnerabilities.
 
-## [ 0.1.0 ] - [ 2025-05-13 ]
+
+## [ 0.1.0 ] - [ 2025-05-20 ]
 
 ### Added
 
