@@ -21,3 +21,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - `barrier` and `wait` control instruction descriptions to `quis.json`
 - `control` field to instructions in `quis.json`
 - Package release workflow (publish to `PyPI` and `npm`)
+
+## Changed
+
+- Name of `npm` package to `qutech-quis`
