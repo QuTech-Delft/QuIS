@@ -12,6 +12,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * **Security** in case of vulnerabilities.
 
 
+## [ M.m.P ] - [ xxxx-yy-zz ]
+
+### Added
+
+- `Rn` gate to the `quis.json`
+
 ## [ 0.1.0 ] - [ 2025-05-20 ]
 
 ### Added
