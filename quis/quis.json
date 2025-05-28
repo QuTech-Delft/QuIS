@@ -457,6 +457,77 @@
                 "base": "reset"
             }
         },
+        "_Rn":
+        {
+            "title": "Rn gate",
+            "description": "An anticlockwise rotation of $\\theta$ radians about the specified axis, and global phase $\\phi$.",
+            "numberOfQubits": 1,
+            "parameters":
+            [
+                {
+                    "reference": "nx",
+                    "type": "float"
+                },
+                {
+                    "reference": "ny",
+                    "type": "float"
+                },
+                {
+                    "reference": "nz",
+                    "type": "float"
+                },
+                {
+                    "reference": "theta",
+                    "type": "float"
+                },
+                {
+                    "reference": "phi",
+                    "type": "float"
+                }
+            ],
+            "semantics":
+            [
+                {
+                    "type": "blochSphereRotation",
+                    "args":
+                    {
+                        "axis":
+                        [
+                            {
+                            "type": "parameter",
+                            "value": "nx"
+                            },
+                            {
+                            "type": "parameter",
+                            "value": "ny"
+                            },
+                            {
+                            "type": "parameter",
+                            "value": "nz"
+                            }
+                        ],
+                        "angle":
+                        {
+                            "type": "parameter",
+                            "value": "theta"
+                        },
+                        "globalPhase":
+                        {
+                            "type": "parameter",
+                            "value": "phi"
+                        }
+                    }
+                }
+            ],
+            "icon":
+            {
+                "base": "R",
+                "suffix":
+                {
+                    "subscript": "n"
+                }
+            }
+        },
         "_Rx":
         {
             "title": "Rx gate",
@@ -1081,6 +1152,9 @@
             "CZ": "_CZ",
             "H": "_H",
             "I": "_I",
+            "mX90": "_mX90",
+            "mY90": "_mY90",
+            "Rn": "_Rn",
             "Rx": "_Rx",
             "Ry": "_Ry",
             "Rz": "_Rz",
@@ -1093,9 +1167,7 @@
             "X90": "_X90",
             "Y": "_Y",
             "Y90": "_Y90",
-            "Z": "_Z",
-            "mX90": "_mX90",
-            "mY90": "_mY90"
+            "Z": "_Z"
         },
         "nonUnitary":
         {
